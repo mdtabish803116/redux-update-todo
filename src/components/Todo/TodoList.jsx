@@ -5,7 +5,7 @@ import {getAllTodo , toggleTodo , deleteTodo} from "../../Redux/Todo/action";
 
 
 export const TodoList = () => {
-    const {todos} = useSelector((state) => state)
+    const {todos} = useSelector((state) => state.Todo)
     console.log(todos);
     const dispatch = useDispatch()
 

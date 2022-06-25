@@ -14,7 +14,7 @@ const todoReducer = (store = {todos : []} , action) => {
         case TOGGLE_TODO:
             return {
                 ...store , todos : store.todos.map((todo) => (
-                       todo.id == action.payload.id ? action.payload : todo
+                       todo.id === action.payload.id ? action.payload : todo
                 ))
             }
         case DELETE_TODO:
