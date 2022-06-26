@@ -9,6 +9,7 @@ export const Login = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+   
 
     console.log(email , password);
     
@@ -26,7 +27,7 @@ export const Login = () => {
        .then((res) => {
            if(res.token) {
               dispatch(logedIn(res));
-   
+      
               navigate("/")
            }
        })

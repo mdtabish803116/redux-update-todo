@@ -1,14 +1,13 @@
 import {Todo} from "./Todo/Todo";
 import {useSelector} from "react-redux";
+import React from "react";
 
 
 export const Home = () => {
-    // const {logedIn} = useSelector((state) => state.Auth);
-    const localAuth = JSON.parse(localStorage.getItem("userAuth"))
-
-
+    const {logedIn} = useSelector((state) => state.Auth);
+   
     return(
 
-         localAuth.logedIn?( <Todo />):null 
+         logedIn?( <Todo />):null 
     )
 }
